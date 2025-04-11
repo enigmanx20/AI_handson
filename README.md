@@ -1,4 +1,4 @@
-# AI_handson  
+![image](https://github.com/user-attachments/assets/beb83521-e206-423f-aa42-2687e75a8bd3)# AI_handson  
 **Realtime Prostate Cancer Segmentation Demo**
 
 ---
@@ -102,16 +102,16 @@ pip install -r requirements.txt
 
 ---
 
-## Class Color Map 🎨
+## 🎨 Class Color Map
 
-| Class | Color  | Preview |
-|:-----:|:------:|:--------|
-| 0     | Black  | ⚫ |
-| 1     | White  | ⚪ |
-| 2     | Green  | 🟢 |
-| 3     | Blue   | 🔵 |
-| 4     | Orange | 🔶 |
-| 5     | Red    | 🔴 |
+| Class                  | Color  | Preview |
+|:----------------------:|:------:|:--------|
+| White background       | Black  | ⚫ |
+| Tissue / Stroma        | White  | ⚪ |
+| Normal epithelium      | Green  | 🟢 |
+| Gleason pattern 3      | Blue   | 🔵 |
+| Gleason pattern 4      | Orange | 🔶 |
+| Gleason pattern 5      | Red    | 🔴 |
 
 ---
 
