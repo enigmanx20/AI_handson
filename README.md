@@ -3,7 +3,7 @@
 
 ---
 
-# Real-Time Segmentation Overlay System
+# AI hands-on: Real-Time Segmentation Overlay
 
 This project captures a specific window on your screen, runs a PyTorch-based segmentation model on it, colorizes the segmentation output based on class labels, and overlays the results onto the live view in real-time.
 
