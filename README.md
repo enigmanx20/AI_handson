@@ -116,8 +116,7 @@ pip install -r requirements.txt
 ---
 
 ## Example Demo Movie
-[![Demo Video](./prostate_demo.jpg)]
-[Demo Video](./prostate_demo_4x.mp4)
+![Demo Video](./prostate_demo_4x.gif)
 
 ---
 
