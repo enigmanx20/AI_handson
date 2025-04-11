@@ -1,9 +1,11 @@
-# AI_handson
-Realtime prostate cancer segmentation demo
+# AI_handson  
+**Realtime Prostate Cancer Segmentation Demo**
+
+---
 
 # Real-Time Segmentation Overlay System
 
-This project captures a specific window on your screen, runs a PyTorch-based segmentation model on it, colorizes the segmentation output based on class labels, and overlays the results onto the live window view in real-time.
+This project captures a specific window on your screen, runs a PyTorch-based segmentation model on it, colorizes the segmentation output based on class labels, and overlays the results onto the live view in real-time.
 
 The GUI is built using **Tkinter**, and **PyTorch** is used for the deep learning inference.
 
@@ -11,11 +13,11 @@ The GUI is built using **Tkinter**, and **PyTorch** is used for the deep learnin
 
 ## Features
 
-- 🖼️ Real-time background screenshot capturing.
-- 🧖️ On-the-fly deep learning inference (PyTorch 1.8.2).
-- 🎨 Segmentation output colorized by class.
-- 🪟 Windows-native GUI with Tkinter and Win32 API.
-- 🔥 Fast inference with mixed precision (`torch.cuda.amp.autocast`).
+- 🖼️ Real-time background screenshot capturing
+- 🧖️ On-the-fly deep learning inference (PyTorch 1.8.2)
+- 🎨 Segmentation output colorized by class
+- 🪟 Windows-native GUI with Tkinter and Win32 API
+- ⚡ Fast inference with mixed precision (`torch.cuda.amp.autocast`)
 
 ---
 
@@ -30,104 +32,111 @@ pip install -r requirements.txt
 **Python Version:**  
 - Python 3.8 or newer is recommended.
 
-**Main libraries:**
+**Main Libraries:**
 - `torch==1.8.2`
 - `torchvision==0.9.2`
 - `Pillow`
 - `pywin32`
-- `tkinter` (comes with Python standard installation)
+- `tkinter` (comes with standard Python installation)
 
 ---
 
 ## Files
 
-| File                        | Description                                             |
-|------------------------------|---------------------------------------------------------|
-| `main.py`                    | Main script to run the GUI and segmentation overlay.    |
-| `CaptureWindow.py`           | Utility functions to capture Windows screen contents.   |
-| `requirements.txt`           | Python dependency list.                                |
-| `README.md`                  | This documentation file.                               |
+| File                  | Description                                              |
+|------------------------|----------------------------------------------------------|
+| `main.ipynb`           | Main Jupyter notebook to run the GUI and segmentation overlay |
+| `CaptureWindow.py`     | Utility functions to capture Windows screen contents     |
+| `requirements.txt`     | Python dependency list                                   |
+| `README.md`            | This documentation file                                  |
 
 ---
 
 ## How to Run
 
-1. Install Python 3.8+ and dependencies:
+1. Clone the Git repository:
+
+   ```bash
+   git clone https://github.com/enigmanx20/AI_handson.git ./
+   ```
+
+2. Download the pretrained model from [Google Drive](https://drive.google.com/file/d/1VzFcX_DdhEQvzT-MTsCJy_IgSU752I0u/view?usp=drive_link), then move it into the `AI_handson` directory:
+
+   ```bash
+   mv Last_segPANDA200_DeepLabv3_1000itr.pt ./AI_handson
+   ```
+
+3. Install [ASAP](https://computationalpathologygroup.github.io/ASAP/) (Automated Slide Analysis Platform).
+
+4. Install Python 3.8+ and required dependencies:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-2. Ensure your segmentation model is correctly loaded in `main.py`.
-
-3. Launch the script:
+5. Launch the Jupyter notebook:
 
    ```bash
-   python main.py
+   jupyter notebook
    ```
 
-4. A window will pop up showing the live screen with the segmentation overlay.
+6. Open `main.ipynb` and update the `slide_name` variable to match your slide file name:
+
+   ```python
+   slide_name = "your_slide_name.svs"
+   ```
+
+7. Open the corresponding slide with ASAP.
+
+8. Run the notebook cells sequentially. A window will pop up displaying the live segmentation overlay on the screen.
 
 ---
 
 ## Model Requirements
 
 - The segmentation model must output a tensor of shape `[batch_size, 6, H, W]`, where 6 is the number of classes.
-- If using a custom model, ensure that the output channels match the class indices (0–5).
+- Ensure the output channels correspond to the class indices (0–5).
 
 ---
 
 ## Class Color Map 🎨
 
-| Class | Color | Preview |
-|:-----:|:------|:--------|
-| 0     | Black | ⚫ |
-| 1     | White | ⚪ |
-| 2     | Green | 🟢 |
-| 3     | Blue  | 🔵 |
-| 4     | Orange| 🔶 |
-| 5     | Red   | 🔴 |
+| Class | Color  | Preview |
+|:-----:|:------:|:--------|
+| 0     | Black  | ⚫ |
+| 1     | White  | ⚪ |
+| 2     | Green  | 🟢 |
+| 3     | Blue   | 🔵 |
+| 4     | Orange | 🔶 |
+| 5     | Red    | 🔴 |
 
 ---
 
 ## Example (Before/After)
 
-| Original Screenshot | Segmentation Overlay |
-|:-------------------:|:--------------------:|
+| Original Screenshot          | Segmentation Overlay         |
+|:-----------------------------:|:-----------------------------:|
 | ![original](./example_original.png) | ![overlay](./example_overlay.png) |
 
 *(You can create these example images after running the system.)*
 
 ---
 
-## System Pipeline
-
-```mermaid
-graph LR
-A[Capture Window] --> B[Preprocess Image]
-B --> C[Run Model Inference]
-C --> D[Generate Colorized Mask]
-D --> E[Overlay on Original Image]
-E --> F[Display in GUI]
-```
-
----
-
 ## License
 
-This project is provided as-is for research and educational purposes.
+**CC BY-NC-SA 4.0**  
+(*Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License*)
 
 ---
 
 ## Notes
 
-- Only Windows OS is supported (because of `win32gui` and DC capture).
+- Only **Windows OS** is supported (due to `win32gui` and native DC capture).
 - The segmentation overlay is blended with 50% transparency over the background.
-- You can modify the color map inside the script if you want to assign different colors for different classes.
+- You can modify the color map and other hyperparameters inside the notebook.
 
 ---
 
 # 🎯 Quick Preview
 
 > **Live capture → Deep learning → Colorize → Display** — everything happening seamlessly!
-
