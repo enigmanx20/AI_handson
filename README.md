@@ -127,6 +127,7 @@ Model: CC BY-SA-NC 4.0 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge
 - Only **Windows OS** is supported (due to `win32gui` and native DC capture).
 - The segmentation overlay is blended with 50% transparency over the background.
 - You can modify the color map and other hyperparameters inside the notebook.
+- Tune the magnification or change mpp parameters to maximize the performance. The model is trained around 0.39 mpp (microns per pixel).
 
 ---
 
