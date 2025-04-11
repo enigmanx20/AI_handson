@@ -1,8 +1,3 @@
-![image](https://github.com/user-attachments/assets/beb83521-e206-423f-aa42-2687e75a8bd3)# AI_handson  
-**Realtime Prostate Cancer Segmentation Demo**
-
----
-
 # AI hands-on: Real-Time Segmentation Overlay
 
 This project captures a specific window on your screen, runs a PyTorch-based segmentation model on it, colorizes the segmentation output based on class labels, and overlays the results onto the live view in real-time.
