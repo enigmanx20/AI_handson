@@ -115,13 +115,9 @@ pip install -r requirements.txt
 
 ---
 
-## Example (Before/After)
-
-| Original Screenshot          | Segmentation Overlay         |
-|:-----------------------------:|:-----------------------------:|
-| ![original](./example_original.png) | ![overlay](./example_overlay.png) |
-
-*(You can create these example images after running the system.)*
+## Example Demo Movie
+[![Demo Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)]
+[Demo Video](./prostate_demo_4x.mp4)
 
 ---
 
