@@ -38,6 +38,7 @@ pip install -r requirements.txt
 - `Pillow`
 - `pywin32`
 - `tkinter` (comes with standard Python installation)
+- ASAP version 1.9.0 (virtual slide viewer)
 
 ---
 
@@ -66,7 +67,7 @@ pip install -r requirements.txt
    mv Last_segPANDA200_DeepLabv3_1000itr.pt ./AI_handson
    ```
 
-3. Install [ASAP](https://computationalpathologygroup.github.io/ASAP/) (Automated Slide Analysis Platform).
+3. Install [ASAP](https://github.com/computationalpathologygroup/ASAP/releases/download/1.9/ASAP-1.9-win64.exe) (Automated Slide Analysis Platform).
 
 4. Install Python 3.8+ and required dependencies:
 
@@ -74,21 +75,23 @@ pip install -r requirements.txt
    pip install -r requirements.txt
    ```
 
-5. Launch the Jupyter notebook:
-
+5. Change the directory and launch the Jupyter notebook:
+    ```bash
+   cd ./AI_handson
+   ```
    ```bash
    jupyter notebook
    ```
 
-6. Open `main.ipynb` and update the `slide_name` variable to match your slide file name:
+7. Open `main.ipynb` and update the `slide_name` variable to match your slide file name:
 
    ```python
    slide_name = "your_slide_name.svs"
    ```
 
-7. Open the corresponding slide with ASAP.
+8. Open the corresponding slide with ASAP.
 
-8. Run the notebook cells sequentially. A window will pop up displaying the live segmentation overlay on the screen.
+9. Run the notebook cells sequentially. A window will pop up displaying the live segmentation overlay on the screen.
 
 ---
 
