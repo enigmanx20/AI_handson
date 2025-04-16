@@ -131,6 +131,18 @@ Model: CC BY-SA-NC 4.0 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge
 
 ---
 
-# 🎯 Quick Preview
-
-> **Live capture → Deep learning → Colorize → Display** — everything happening seamlessly!
+# Citation
+If you use this work, SegPanda dataset, and models, please cite the following paper:
+```bibtex
+@InProceedings{10.1007/978-3-031-44917-8_25,
+  author    = {Kawai, Masakata and Ota, Noriaki and Yamaoka, Shinsuke},
+  editor    = {Xue, Zhiyun and Antani, Sameer and Zamzmi, Ghada and Yang, Feng and Rajaraman, Sivaramakrishnan and Huang, Sharon Xiaolei and Linguraru, Marius George and Liang, Zhaohui},
+  title     = {Large-Scale Pretraining on Pathological Images for Fine-Tuning of Small Pathological Benchmarks},
+  booktitle = {Medical Image Learning with Limited and Noisy Data},
+  year      = {2023},
+  publisher = {Springer Nature Switzerland},
+  address   = {Cham},
+  pages     = {257--267},
+  isbn      = {978-3-031-44917-8}
+}
+```
