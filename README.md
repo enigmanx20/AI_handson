@@ -78,7 +78,11 @@ pip install -r requirements.txt
    jupyter notebook
    ```
 
-7. Open `main.ipynb`.
+7. Open `main.ipynb` and update the `slide_name` variable to match your slide file name:
+ 
+    ```python
+    slide_name = "your_slide_name.svs"
+    ```
 
 8. Open the corresponding slide with ASAP.
 
