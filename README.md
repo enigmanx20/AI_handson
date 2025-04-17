@@ -67,7 +67,7 @@ pip install -r requirements.txt
 4. Install Python 3.8+ and required dependencies:
 
    ```bash
-   pip install -r requirements.txt
+   pip install -r ./AI_handson/requirements.txt
    ```
 
 5. Change the directory and launch the Jupyter notebook:
